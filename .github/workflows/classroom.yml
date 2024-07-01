@@ -1,0 +1,64 @@
+name: Autograding Tests
+'on':
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Step 1 Create a Branch
+      id: step-1-create-a-branch
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Step 1 Create a Branch
+        setup-command: sleep 20
+        command: "[ $(cat .github/steps/-step.txt) -ge 1 ] || [ $(cat .github/steps/-step.txt)
+          = X ]"
+        timeout: 10
+        max-score: 1
+    - name: Step 2 Commit a File
+      id: step-2-commit-a-file
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Step 2 Commit a File
+        setup-command: sleep 20
+        command: "[ $(cat .github/steps/-step.txt) -ge 2 ] || [ $(cat .github/steps/-step.txt)
+          = X ]"
+        timeout: 10
+        max-score: 1
+    - name: Step 3 Open a Pull Request
+      id: step-3-open-a-pull-request
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Step 3 Open a Pull Request
+        setup-command: sleep 20
+        command: "[ $(cat .github/steps/-step.txt) -ge 3 ] || [ $(cat .github/steps/-step.txt)
+          = X ]"
+        timeout: 10
+        max-score: 1
+    - name: Step 4 Merge Your Pull Request
+      id: step-4-merge-your-pull-request
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Step 4 Merge Your Pull Request
+        setup-command: sleep 20
+        command: "[ $(cat .github/steps/-step.txt) -ge 4 ] || [ $(cat .github/steps/-step.txt)
+          = X ]"
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        STEP-1-CREATE-A-BRANCH_RESULTS: "${{steps.step-1-create-a-branch.outputs.result}}"
+        STEP-2-COMMIT-A-FILE_RESULTS: "${{steps.step-2-commit-a-file.outputs.result}}"
+        STEP-3-OPEN-A-PULL-REQUEST_RESULTS: "${{steps.step-3-open-a-pull-request.outputs.result}}"
+        STEP-4-MERGE-YOUR-PULL-REQUEST_RESULTS: "${{steps.step-4-merge-your-pull-request.outputs.result}}"
+      with:
+        runners: step-1-create-a-branch,step-2-commit-a-file,step-3-open-a-pull-request,step-4-merge-your-pull-request
