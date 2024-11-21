@@ -14,29 +14,39 @@ _Get started using GitHub in less than an hour._
 </header>
 
 <!--
-  <<< Author notes: Course start >>>
-  Include start button, a note about Actions minutes,
-  and tell the learner why they should take the course.
+  <<< Author notes: Finish >>>
+  Review what we learned, ask for feedback, provide next steps.
 -->
 
-## Welcome
+## Finish
 
-People use GitHub to build some of the most advanced technologies in the world. Whether you’re visualizing data or building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better. GitHub Skills’ “Introduction to GitHub” course guides you through everything you need to start contributing in less than an hour.
+_Congratulations, you've completed this course and joined the world of developers!_
 
-- **Who is this for**: New developers, new GitHub users, and students.
-- **What you'll learn**: We'll introduce repositories, branches, commits, and pull requests.
-- **What you'll build**: We'll make a short Markdown file you can use as your [profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
-- **Prerequisites**: None. This course is a great introduction for your first day on GitHub.
-- **How long**: This course takes less than one hour to complete.
+<img src=https://octodex.github.com/images/collabocats.jpg alt=celebrate width=300 align=right>
 
-In this course, you will:
+Here's a recap of your accomplishments:
 
-1. Create a branch
-2. Commit a file
-3. Open a pull request
-4. Merge your pull request
+- You learned about GitHub, repositories, branches, commits, and pull requests.
+- You created a branch, a commit, and a pull request.
+- You merged a pull request.
+- You made your first contribution! :tada:
 
-Wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in this assignment repository's README.
+### What's next?
+
+If you'd like to make a profile README, use the quickstart instructions below or follow the instructions in the [Managing your profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme) article.
+
+1. Make a new public repository with a name that matches your GitHub username.
+2. Create a file named `README.md` in its root. The "root" means not inside any folder in your repository.
+3. Edit the contents of the `README.md` file.
+4. If you created a new branch for your file, open and merge a pull request on your branch.
+5. Lastly, we'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/community/discussions/categories/github-education).
+
+Check out these resources to learn more or get involved:
+
+- Are you a student? Check out the [Student Developer Pack](https://education.github.com/pack).
+- [Take another GitHub Skills course](https://github.com/skills).
+- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started).
+- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
 
 <footer>
 
